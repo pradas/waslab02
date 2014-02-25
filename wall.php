@@ -82,6 +82,7 @@ else
 	<body class="wotbody">
 
 	<h1 class="wottitle">Wall of Tweets 2</h1>
+	<p align="middle">Get the RSS feed <a href="rss.php">here</a></p>
 
 	<div class="walltweet">
 	<form action="wall.php" method="post">
@@ -103,9 +104,9 @@ else
 		  echo "<br><h3>...... ".strftime("%A, %B %d, %Y", $tweet["time"])."</h3>\n";
 		  $current_date = $day;
 		  }
-	  echo "<div class=\"wotitem\">\n";
-	  echo "<div class=\"likes\">\n";
 	  $tweetid = $tweet["id"];
+	  echo "<div class=\"wotitem\" id=\"item_$tweetid\">\n";
+	  echo "<div class=\"likes\">\n";
 	  $target = "showLikes_".$tweetid;
 	  echo "<span class=\"numlikes\" id='".$target."'>".$tweet["likes"]."</span><br/><span class=\"smallfont\">people like this<span><br/><br/>\n";
 	  echo "<button onclick=\"likeHandler('".$tweetid."')\">like</button><br/>\n";
