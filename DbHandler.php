@@ -16,12 +16,12 @@ class DbHandler extends SQLite3 {
 						"twLIKES INTEGER DEFAULT 0,".
 						"twTIME timestamp DEFAULT CURRENT_TIMESTAMP)";
 		    $this->exec($create);
-		    $this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Sherlock','A cynic is a man who, when he smells flowers, looks around for a coffin',5,'2015-02-19 14:56:11')");
-			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Mycroft','No married man is genuinely happy if he has to drink worse whisky than he used to drink when he was single',5,'2015-02-20 17:23:45')");
-			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Sherlock','Before a man speaks it is always safe to assume that he is a fool. After he speaks, it is seldom necessary to assume it',6,'2015-02-20 19:07:11')");
-			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Mycroft','Adultery is the application of democracy to love',6,'2015-02-21 10:46:31')");
-			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Mycroft','A judge is a law student who marks his own examination papers',22,'2015-02-22 10:06:11')");
-			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Sherlock','For every complex problem there is an answer that is clear, simple, and wrong',11,'2015-02-22 11:16:01')");
+		    $this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Sherlock','A cynic is a man who, when he smells flowers, looks around for a coffin',5,'2016-02-19 14:56:11')");
+			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Mycroft','No married man is genuinely happy if he has to drink worse whisky than he used to drink when he was single',5,'2016-02-20 17:23:45')");
+			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Sherlock','Before a man speaks it is always safe to assume that he is a fool. After he speaks, it is seldom necessary to assume it',6,'2016-02-20 19:07:11')");
+			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Mycroft','Adultery is the application of democracy to love',6,'2016-02-21 10:46:31')");
+			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Mycroft','A judge is a law student who marks his own examination papers',22,'2016-02-22 10:06:11')");
+			$this->exec("insert into tweets (twAUTHOR, twTEXT, twLIKES, twTIME) values('Sherlock','For every complex problem there is an answer that is clear, simple, and wrong',11,'2016-02-22 11:16:01')");
         
 		} 
 	}
