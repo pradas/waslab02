@@ -34,4 +34,14 @@ $context = stream_context_create($opts);
 $result = file_get_contents($URI, false, $context);
 echo $result;
 
+//Task 5
+$opts = array('http' =>
+    array(
+        'method'  => 'DELETE',
+    )
+);
+
+$context = stream_context_create($opts);
+$result = file_get_contents("http://localhost:8080/waslab02/wall.php?twid=9", false, $context);
+echo $result;
 ?>
