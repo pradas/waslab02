@@ -18,15 +18,22 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
 	case 'POST': 
 		
-		
-
+		//Task 2
 		$dbhandler->insertTweet($_POST["author"],$_POST["tweet_text"]);
 		
 		break;
 		
 	case 'PUT':
 		
-		// To be implemented (See Task #4)
+		//Task4
+		$tweet = new SimpleXMLElement(file_get_contents('php://input'));
+		$idTweetNew = $dbhandler->insertTweet($tweet->author,$tweet->text);
+		
+		$resp = new SimpleXMLElement("<response></response>");
+		$tweetId = $resp->addChild('tweetid', $idTweetNew);
+		$tweetId->addAttribute('author', $tweet->author);
+		
+		echo $resp->asXML();
 		
         exit;
 		
