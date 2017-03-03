@@ -25,7 +25,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		
 	case 'PUT':
 		
-		//Task4
+		//Task 4
 		$tweet = new SimpleXMLElement(file_get_contents('php://input'));
 		$idTweetNew = $dbhandler->insertTweet($tweet->author,$tweet->text);
 		
@@ -39,7 +39,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 		
 	case 'DELETE':
 	   
-	    //Task5
+	    //Task 5
 		$tweetId = $_GET['twid'];
 		$result = $dbhandler->deleteTweet($tweetId);
 		if ($result) 
@@ -58,8 +58,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
 } 
 
 
-if (!isset($_SERVER['HTTP_ACCEPT']) || !strpos($_SERVER['HTTP_ACCEPT'],"html")) // If $_SERVER['HTTP_ACCEPT'] does not contain "text/html"
-                                                                                     // then return XML response				 
+if (!isset($_SERVER['HTTP_ACCEPT']) || !strpos($_SERVER['HTTP_ACCEPT'],"html")) 
+// If $_SERVER['HTTP_ACCEPT'] does not contain "text/html"
+// then return XML response				 
 {
 	$resp = new SimpleXMLElement("<alltweets></alltweets>");
 	$resp->addAttribute('version', '0.1');

@@ -4,7 +4,6 @@ $URI = 'http://localhost:8080/waslab02/wall.php';
 $resp = file_get_contents($URI);
 
 echo $http_response_header[0], "\n"; // Print the first HTTP response header
-//echo $resp;  // Print HTTP response body
 
 //Task 3
 $tweets = new SimpleXMLElement($resp);
@@ -17,8 +16,8 @@ foreach ($tweets->tweet as $tweet) {
 
 //Task 4
 $resp = new SimpleXMLElement("<tweet></tweet>");
-$resp->author = "a";
-$resp->text = "aa";
+$resp->author = "Winston Churchill";
+$resp->text = "Empires of the future will be empires of the mind.";
 
 $postdata = $resp->asXML();
 
